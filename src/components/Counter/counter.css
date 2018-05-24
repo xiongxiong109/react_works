@@ -1,0 +1,29 @@
+.t-counter__wrapper {
+}
+.t-counter__item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 30px;
+}
+.t-counter__button {
+    outline: none;
+    appearance: none;
+    width: 30px;
+    height: 100%;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    background-color: #fff;
+}
+.t-counter__button:active {
+    filter: brightness(.9);
+}
+.t-counter__button.is-disabled {
+    background-color: #efefef;
+}
+.t-counter__button.is-disabled:active {
+    filter: none;
+}
+.t-counter__info {
+
+}
