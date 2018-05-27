@@ -1,4 +1,9 @@
 import React, { Component } from 'react';
+// 全量引入
+import 'thanos/dist/main.css'
+import { TButton } from 'thanos'
+// 按需引入
+// import TButton from 'thanos/dist/TButton/TButton';
 
 import Counter from './components/Counter'
 
@@ -12,6 +17,7 @@ class App extends Component {
           max={4}
           ref="counter"
         />
+        <TButton />
       </div>
     );
   }
