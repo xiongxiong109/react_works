@@ -1,0 +1,44 @@
+.rand__btn {
+    width: 100%;
+    height: 30px;
+}
+.rand__list--item {
+    background-color: #fff;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+.rand__list--item + .rand__list--item:before {
+    content: '';
+    display: block;
+    width: 100%;
+    height: 1px;
+    background-color: #ddd;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform-origin: top center;
+    transform: scale(1, .5);
+}
+
+/*flash transition*/
+.flash-enter {
+    opacity: 0;
+    height: 0;
+    transition: .3s ease;
+}
+.flash-enter-active {
+    opacity: 1;
+    height: 40px;
+}
+.flash-exit {
+    opacity: 1;
+    height: 40px;
+}
+.flash-exit-active {
+    opacity: 0;
+    height: 0;
+    transition: .3s ease;
+}
