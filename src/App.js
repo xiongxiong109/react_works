@@ -14,6 +14,7 @@ class App extends Component {
       <div className="App">
         <SearchInput />
         <RandomList />
+        <p>{'bottom'}</p>
       </div>
     );
   }

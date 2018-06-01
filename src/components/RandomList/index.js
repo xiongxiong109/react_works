@@ -20,25 +20,26 @@ export default class RandomList extends Component {
                     className="rand__btn"
                     onClick={ev => this.evtRandList(ev)}
                 >生成随机列表</button>
-                <ul className="rand__list">
-                    <TransitionGroup>
-                        {list.map(item =>(
-                            <CSSTransition
-                                key={item}
-                                timeout={300}
-                                classNames="flash"
-                            >
-                                <li className="rand__list--item">List {item}</li>
-                            </CSSTransition>
-                        ))}
-                    </TransitionGroup>
-                </ul>
+                <TransitionGroup
+                    className="rand__list"
+                    component="ul"
+                >
+                    {list.map(item =>(
+                        <CSSTransition
+                            key={item}
+                            timeout={300}
+                            classNames="flash"
+                        >
+                            <li className="rand__list--item">List {item}</li>
+                        </CSSTransition>
+                    ))}
+                </TransitionGroup>
             </div>
         )
     }
     evtRandList(ev) {
-        const randomList = _.shuffle(_.range(10));
-        const randomLen = _.random(3, 8);
+        const randomList = _.shuffle(_.range(20));
+        const randomLen = _.random(5, 15);
         this.setState({
             list: [...randomList.slice(0, randomLen)]
         })
