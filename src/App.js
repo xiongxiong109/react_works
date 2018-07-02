@@ -3,12 +3,7 @@ import Modal from './components.base/Modal/modal'
 import RandomList from './components/RandomList'
 
 import 'thanos/dist/main.css'
-// import { TButton, TInput } from 'thanos'
-
-import 'thanos/dist/SearchInput/SearchInput.css'
-import 'thanos/dist/SearchCity/SearchCity.css'
-import SearchInput from 'thanos/dist/SearchInput/SearchInput'
-import SearchCity from 'thanos/dist/SearchCity/SearchCity'
+import { SearchInput, SearchCity } from 'thanos'
 
 class App extends Component {
   constructor(props) {
