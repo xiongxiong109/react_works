@@ -3,6 +3,7 @@ import React, { Component } from 'react'
 import _ from 'lodash'
 import { CSSTransition, TransitionGroup } from 'react-transition-group'
 import './randomList.css'
+import Store from 'thanos/dist/store/store'
 
 export default class RandomList extends Component {
     constructor(props) {
@@ -37,11 +38,25 @@ export default class RandomList extends Component {
             </div>
         )
     }
+    componentDidMount() {
+        this.store = new Store({
+            key: 'THANOS_RANDOM_KEY'
+        })
+        if (this.store.isExists()) {
+            this.setState({
+                list: this.store.get().list
+            })
+        }
+    }
     evtRandList(ev) {
         const randomList = _.shuffle(_.range(20));
         const randomLen = _.random(5, 15);
+        const rst = [...randomList.slice(0, randomLen)]
         this.setState({
-            list: [...randomList.slice(0, randomLen)]
+            list: rst
+        })
+        this.store.set({
+            list: rst
         })
     }
 }
