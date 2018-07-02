@@ -3,7 +3,7 @@ import React, { Component } from 'react'
 import _ from 'lodash'
 import { CSSTransition, TransitionGroup } from 'react-transition-group'
 import './randomList.css'
-import Store from 'thanos/dist/store/store'
+import Store from 'thanos/dist/store'
 
 export default class RandomList extends Component {
     constructor(props) {
