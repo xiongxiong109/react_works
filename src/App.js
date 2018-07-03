@@ -3,7 +3,8 @@ import Modal from './components.base/Modal/modal'
 import RandomList from './components/RandomList'
 
 import 'thanos/dist/main.css'
-import { SearchInput, SearchCity } from 'thanos'
+import 'thanos/dist/SearchInput/style.css'
+import { SearchCity } from 'thanos'
 
 class App extends Component {
   constructor(props) {
@@ -20,7 +21,6 @@ class App extends Component {
     const { modal } = this.state;
     return (
       <div className="App">
-        <SearchInput />
         <SearchCity />
         <RandomList />
         <button onClick={() => this.showSth()}>showModal</button>
