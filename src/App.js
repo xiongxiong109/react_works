@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import Modal from './components.base/Modal/modal'
+// import Modal from './components.base/Modal/modal'
 import RandomList from './components/RandomList'
 
 import 'thanos/dist/main.css'
@@ -24,7 +24,6 @@ class App extends Component {
         <SearchCity />
         <RandomList />
         <button onClick={() => this.showSth()}>showModal</button>
-        <Modal {...modal} />
       </div>
     );
   }

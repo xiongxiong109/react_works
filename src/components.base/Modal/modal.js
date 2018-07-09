@@ -16,6 +16,12 @@ export default class Modal extends Component {
         content: '',
         onClickOutside: null
     }
+    constructor(props) {
+        super(props)
+        this.state = {
+            root: null
+        }
+    }
     render() {
         
         const {
@@ -40,6 +46,11 @@ export default class Modal extends Component {
                     <div className="app__modal--content">{ content }</div>
                 </div>
             </div>,
-        document.body)
+        this.state.root)
+    }
+    componentDidMount() {
+        this.setState({
+            root: document.body
+        })
     }
 }

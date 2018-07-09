@@ -1,0 +1,11 @@
+doctype html
+html
+    head
+        title #{title}
+        meta(name="viewport", content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no")
+        link(rel="stylesheet", href="//webresource.c-ctrip.com/styles/h5/common/n_main.css")
+        link(rel="stylesheet", href="#{assetConfig['main.css']}")
+    body
+        block main
+        script(src="#{assetConfig['vendor.js']}")
+        script(src="#{assetConfig['main.js']}")

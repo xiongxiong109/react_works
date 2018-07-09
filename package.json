@@ -25,6 +25,7 @@
     "file-loader": "1.1.5",
     "fs-extra": "3.0.1",
     "html-webpack-plugin": "2.29.0",
+    "jade": "^1.11.0",
     "jest": "20.0.4",
     "object-assign": "4.1.1",
     "postcss-flexbugs-fixes": "3.2.0",
@@ -45,12 +46,15 @@
   },
   "devDependencies": {
     "babel-plugin-component": "^1.1.1",
+    "babel-polyfill": "^6.26.0",
+    "css-modules-require-hook": "^4.2.3",
     "react-transition-group": "^2.3.1",
     "webpack-bundle-analyzer": "^2.13.1"
   },
   "scripts": {
+    "server": "cross-env NODE_ENV=test node ./bin/www",
     "start": "node scripts/start.js",
-    "build": "node scripts/build.js",
+    "build": "cross-env NODE_ENV=production node scripts/build.js",
     "test": "node scripts/test.js --env=jsdom"
   },
   "description": "This project was bootstrapped with [Create React App](https://github.com/facebookincubator/create-react-app).",
